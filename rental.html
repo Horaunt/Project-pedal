@@ -64,22 +64,66 @@
 
 
 
-
-<!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-  Launch demo modal
-</button>
-
-<!-- to rent Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<!--rent  Modal -->
+<div class="modal fade" id="RentModal" tabindex="-1" aria-labelledby="RentLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+        <h1 class="modal-title fs-5" id="RentLabel">Rent a Cycle</h1>
+		
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        ...
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            No of Hours
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">1 hour</a></li>
+            <li><a class="dropdown-item" href="#">2 hour</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+          </ul>
+		  </li>
+		  <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Near Location
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">MAIN GATE</a></li>
+            <li><a class="dropdown-item" href="#">TT</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+          </ul>
+		  </li>
+		  <form>
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">NAME </label>
+    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+    <div id="emailHelp" class="form-text"></div>
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label">REGISTRATION NUMBER</label>
+    <input type="password" class="form-control" id="exampleInputPassword1">
+  </div>
+  
+  <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Dropdown
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+          </ul>
+        </li>
+  <div class="mb-3 form-check">
+    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+    <label class="form-check-label" for="exampleCheck1">Check me out</label>
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -92,21 +136,67 @@
 
 
 
-<!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-  Launch demo modal
-</button>
-
-<!--to let Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<!-- let Modal -->
+<div class="modal fade" id="LetModal" tabindex="-1" aria-labelledby="LetLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+        <h1 class="modal-title fs-5" id="LetLabel">OWNER</h1>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        ...
+        <form>
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">NAME</label>
+    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+    <div id="emailHelp" class="form-text"></div>
+  </div>
+
+  <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label">REGISTRATION NUMBER</label>
+    <input type="password" class="form-control" id="exampleInputPassword1">
+  </div>
+  <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            AVAILABILITY
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">MAIN GATE</a></li>
+            <li><a class="dropdown-item" href="#">TT</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+          </ul>
+        </li>
+  
+  <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            GEAR
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">YES</a></li>
+            <li><a class="dropdown-item" href="#">NO</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+          </ul>
+        </li>
+	<div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">COLOR</label>
+    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+    <div id="emailHelp" class="form-text">
+	</div>
+	<div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">MAKE</label>
+    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+    <div id="emailHelp" class="form-text"></div>
+    </div>
+  </div>
+  
+  <div class="mb-3 form-check">
+    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+    <label class="form-check-label" for="exampleCheck1">Check me out</label>
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -115,15 +205,27 @@
     </div>
   </div>
 </div>
-    
+
+
+
+
+
+
+
+
+
+
+
+
+
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
   <div id="carouselExample" class="carousel slide">
   <div class="carousel-inner">
     <div class="carousel-item active">
       <img src="4.jpg" class="d-block w-100" alt="...">
 	  <div class="carousel-caption d-none d-md-block">
-	  <button class="btn btn-danger">To Rent</button>
-	  <button class="btn btn-success">To Let</button>
+	  <button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#RentModal">Rent</button>
+	  <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#LetModal">Let</button>
     </div>
     <div class="carousel-item">
       <img src="..." class="d-block w-100" alt="...">
