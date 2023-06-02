@@ -5,8 +5,8 @@ const mysql = require('mysql');
 const connection = mysql.createConnection({
   host: 'localhost', // Replace with your MySQL server host
   user: 'root', // Replace with your MySQL user
-  password: 'password', // Replace with your MySQL password
-  database: 'cycle_rental_service' // Replace with your MySQL database name
+  password: 'Pr@22254518', // Replace with your MySQL password
+  database: 'owner database' // Replace with your MySQL database name
 });
 
 // Connect to the MySQL server
@@ -56,6 +56,27 @@ const server = http.createServer((req, res) => {
     res.end('Not Found');
   }
 });
+
+// Middleware function to log incoming requests
+const requestLogger = (req, res, next) => {
+  console.log(`[${new Date().toISOString()}] ${req.method} ${req.url}`);
+  next();
+};
+
+// Middleware function for error handling
+const errorHandler = (err, req, res, next) => {
+  console.error(err.stack);
+  res.writeHead(500, { 'Content-Type': 'text/plain' });
+  res.end('Internal Server Error');
+};
+
+// Set up middleware
+server.on('request', requestLogger);
+server.on('request', express.json());
+server.on('request', express.urlencoded({ extended: false }));
+
+// Use error handling middleware
+server.on('error', errorHandler);
 
 // Start the server
 const port = 3000; // Replace with your desired port number
