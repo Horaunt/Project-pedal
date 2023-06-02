@@ -6,7 +6,7 @@ const connection = mysql.createConnection({
   host: 'localhost', 
   user: 'root', 
   password: 'Pr@22254518', 
-  database: 'owner_database'
+  database: 'owner_database' 
 });
 
 // Connecting to the MySQL server
@@ -72,14 +72,27 @@ const errorHandler = (err, req, res, next) => {
 
 // Set up middleware
 server.on('request', requestLogger);
-server.on('request', express.json());
-server.on('request', express.urlencoded({ extended: false }));
+server.on('request', (req, res) => {
+  express.json()(req, res, (err) => {
+    if (err) {
+      errorHandler(err, req, res);
+    } else {
+      express.urlencoded({ extended: false })(req, res, (err) => {
+        if (err) {
+          errorHandler(err, req, res);
+        } else {
+          server.emit('route', req, res);
+        }
+      });
+    }
+  });
+});
 
 // Using error handling middleware
 server.on('error', errorHandler);
 
 // Starting the server
-const port = 3000; // Port Number
+const port = 3000; // Replacing with your desired port number
 server.listen(port, () => {
   console.log(`Server running on port ${port}`);
 });
