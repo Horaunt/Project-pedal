@@ -1,15 +1,15 @@
 const http = require('http');
 const mysql = require('mysql');
 
-// Create a MySQL connection
+// Creating a MySQL connection
 const connection = mysql.createConnection({
-  host: 'localhost', // Replace with your MySQL server host
-  user: 'root', // Replace with your MySQL user
-  password: 'Pr@22254518', // Replace with your MySQL password
-  database: 'owner database' // Replace with your MySQL database name
+  host: 'localhost', 
+  user: 'root', 
+  password: 'Pr@22254518', 
+  database: 'owner_database'
 });
 
-// Connect to the MySQL server
+// Connecting to the MySQL server
 connection.connect((err) => {
   if (err) {
     console.error('Error connecting to the database:', err);
@@ -18,10 +18,10 @@ connection.connect((err) => {
   console.log('Connected to the database');
 });
 
-// Create the HTTP server
+// Creating the HTTP server
 const server = http.createServer((req, res) => {
   if (req.url === '/cycles' && req.method === 'GET') {
-    // Retrieve all cycles from the database
+    // Retrieving all cycles from the database
     connection.query('SELECT * FROM cycles', (error, results) => {
       if (error) {
         console.error('Error retrieving cycles:', error);
@@ -33,7 +33,7 @@ const server = http.createServer((req, res) => {
       }
     });
   } else if (req.url === '/cycles' && req.method === 'POST') {
-    // Create a new cycle
+    // Creating a new cycle
     let body = '';
     req.on('data', (chunk) => {
       body += chunk;
@@ -75,11 +75,11 @@ server.on('request', requestLogger);
 server.on('request', express.json());
 server.on('request', express.urlencoded({ extended: false }));
 
-// Use error handling middleware
+// Using error handling middleware
 server.on('error', errorHandler);
 
-// Start the server
-const port = 3000; // Replace with your desired port number
+// Starting the server
+const port = 3000; // Port Number
 server.listen(port, () => {
   console.log(`Server running on port ${port}`);
 });
