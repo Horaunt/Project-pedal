@@ -47,10 +47,8 @@
           <ul class="dropdown-menu">
             <li><a class="dropdown-item" href="#">1 hour</a></li>
             <li><a class="dropdown-item" href="#">2 hour</a></li>
-			<li><a class="dropdown-item" href="#">3 hour</a></li>
-			<li><a class="dropdown-item" href="#">4 hour</a></li>
             <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="#">A Day</a></li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
           </ul>
 		  </li>
 		  <li class="nav-item dropdown">
@@ -60,9 +58,6 @@
           <ul class="dropdown-menu">
             <li><a class="dropdown-item" href="#">MAIN GATE</a></li>
             <li><a class="dropdown-item" href="#">TT</a></li>
-			<li><a class="dropdown-item" href="#">GDN</a></li>
-			<li><a class="dropdown-item" href="#">PRP</a></li>
-			<li><a class="dropdown-item" href="#">MH Q-BLOCK</a></li>
             <li><hr class="dropdown-divider"></li>
             <li><a class="dropdown-item" href="#">Something else here</a></li>
           </ul>
@@ -85,6 +80,7 @@
     <label class="form-check-label" for="exampleCheck1">Check me out</label>
   </div>
   <button type="submit" class="btn btn-primary">Submit</button>
+  
 </form>
       </div>
       <div class="modal-footer">
@@ -157,22 +153,44 @@
     <input type="checkbox" class="form-check-input" id="exampleCheck1">
     <label class="form-check-label" for="exampleCheck1">Check me out</label>
   </div>
-  <a href=let.html>
-  <div>
-  
   <button type="submit" class="btn btn-primary">Submit</button>
-  
-  </div>
-  </a>
+  <!DOCTYPE html>
+<html>
+<head>
+    <title>Form Action Example</title>
+</head>
+<body>
+    <form action="index.php" method="POST">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <label for="regNo">Reg. No.:</label>
+        <input type="text" id="regNo" name="regNo" required><br><br>
+
+        <label for="availability">Availability:</label>
+        <input type="checkbox" id="availability" name="availability"><br><br>
+
+        <label for="gear">Gear:</label>
+        <select id="gear" name="gear">
+            <option value="Automatic">Automatic</option>
+            <option value="Manual">Manual</option>
+        </select><br><br>
+
+        <label for="color">Color:</label>
+        <input type="text" id="color" name="color" required><br><br>
+
+        <label for="make">Make:</label>
+        <input type="text" id="make" name="make" required><br><br>
+
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
 </form>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-		
-		
         <button type="button" class="btn btn-primary">Save changes</button>
-		
-		
       </div>
     </div>
   </div>
@@ -219,6 +237,9 @@
   </button>
   
 </div>
-
+<script src="index.js"></script>
   </body>
 </html>
+
+
+<!--INSERT INTO `cycles` (`id`, `owner_reg_no`, `make`, `model`, `gear`, `colour`) VALUES ('22341', '22BCE0000', 'AVON', 'RIDER', 'NO', 'RED');-->
