@@ -103,7 +103,35 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        <form>
+	  <form action="index.php" method="POST">
+    <label for="name">Name:</label>
+    <input type="text" name="name" id="name" required><br><br>
+    
+    <label for="owner_reg_no">Owner Registration No:</label>
+    <input type="text" name="owner_reg_no" id="owner_reg_no" required><br><br>
+    
+    <label for="location">Location:</label>
+    <input type="text" name="location" id="location" required><br><br>
+    
+    <label for="make">Make:</label>
+    <input type="text" name="make" id="make" required><br><br>
+    
+    <label for="model">Model:</label>
+    <input type="text" name="model" id="model" required><br><br>
+    
+    <label for="gear">Gear:</label>
+    <select name="gear" id="gear" required>
+        <option value="yes">Yes</option>
+        <option value="no">No</option>
+    </select><br><br>
+    
+    <label for="clr">Colour:</label>
+    <!--<input type="text" name="model" id="model" required><br><br>-->
+	<input type="text" name="clr" id="clr" required><br><br>
+    
+    <input type="submit" value="Submit">
+</form>
+        <!----<form >
   <div class="mb-3">
     <label for="exampleInputEmail1" class="form-label">NAME</label>
     <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
@@ -186,7 +214,7 @@
     </form>
 </body>
 </html>
-</form>
+</form>---->
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
